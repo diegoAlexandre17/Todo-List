@@ -31,7 +31,6 @@ formulario.addEventListener('submit', (e) => {
 
 /* -----FUNCIONES------ */
 
-
 const btnAccion = (e) => {
     if (e.target.classList.contains('fa-check-circle')) {
         tareas[e.target.dataset.id].estado = true;
@@ -52,7 +51,7 @@ const btnAccion = (e) => {
     }
 
     e.stopPropagation();
-}
+};
 
 const setTarea = e => {
     if (e.target.querySelector('input').value.trim() === '') {
@@ -74,7 +73,7 @@ const setTarea = e => {
     e.target.querySelector('input').focus() //Para colocar el focus en el input cuando el usuario haya dado click.
 
     pintarTareas();
-}
+};
 
 const pintarTareas = () => {
 
@@ -114,7 +113,7 @@ const pintarTareas = () => {
 
     listaTareas.appendChild(fragment) //Ahora fuera del foreach para evitar el reflow, le colocamos a listaTareas nuestro fragment.
 
-}
+};
 
 
 
